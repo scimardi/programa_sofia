@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>inicio</title>
+    <meta charset="uft-8">
+</head>
+
+<body>
+    <h1>INICIO</h1>
+    <br>
+
+    {%if session["usuario"]: %}
+        <a href="/logout">Logout</a>
+        <br>
+        <a href="/listar_pessoas">Listar pessoas</a>
+    {%else: %}
+        <a href="/form_login">Login</a>
+    {%endif%}
+</body>
+</html>

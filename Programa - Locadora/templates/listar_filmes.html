@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>inicio</title>
+    <meta charset="uft-8">
+</head>
+
+<body>
+    <h1>Lista</h1>
+    <br>
+
+        {%for p in usuarios:%}
+            <strong>{{p.cod}}</strong> &nbsp; {{p.nome}} &nbsp; {{p.genero}} &nbsp; {{p.ano_lanc}} &nbsp; 
+            <a href=/excluir_filme?cod={{p.cod}}>Excluir</a> &nbsp; 
+            <a href=/form_editar_filme?cod={{p.cod}}><img src="static/alterar.png" style="width: 15px; height: 15px;"></a>
+            <form action="/form_editar_filme">
+                <input type="hidden" name="cod" value="{{p.cod}}">
+                <input type="submit" value="Alterar"> <!-- botao pra enviar dados (alterar pessoa) -->
+                <!-- faz a msm coisa do link -->
+            </form>
+    
+        {%endfor%}
+
+        <a href="/form_inserir_filme">Inserir Pessoa</a>
+
+        <a href="/">Voltar ao inicio</a>
+</body>
+</html>

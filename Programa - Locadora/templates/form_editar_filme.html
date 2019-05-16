@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>inicio</title>
+    <meta charset="uft-8">
+</head>
+
+<body>
+    <h1>Alterar fime</h1>
+    <br>
+
+    <br>
+    <strong>Código: {{achei.cod}}</strong>
+    <br>
+    <form action="/editar_filme" method='post'>
+
+        <input type="hidden" name=cod value={{achei.cod}}> <!-- identificador para o servidor saber qual pessoa sera modificada -->      
+
+        Nome: <input type="text" name="nome", value="{{achei.nome}}">
+
+        Gênero: <input type="text" name="genero", value="{{achei.genero}}">
+
+        Ano de Lançamento: <input type="text" name="ano_lanc", value="{{achei.ano_lanc}}">
+
+        <input type="submit" value="Alterar">
+    </form>
+</body>
+</html>

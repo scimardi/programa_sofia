@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>alterar</title>
+    <meta charset="uft-8">
+</head>
+
+<body>
+    <h1>Alterar pessoa</h1>
+    <br>
+
+    <br>
+    <strong>CPF: {{achei.cpf}}</strong>
+    <br>
+    <form action="/alterar_pessoa" method='post'>
+
+        <input type="hidden" name=cpf value={{achei.cpf}}> <!-- identificador para o servidor saber qual pessoa sera modificada -->      
+
+        Nome: <input type="text" name="nome", value="{{achei.nome}}">
+
+        Endereco: <input type="text" name="endereco", value="{{achei.endereco}}">
+
+        Telefone: <input type="text" name="telefone", value="{{achei.telefone}}">
+
+        <input type="submit" value="Alterar">
+    </form>
+</body>
+</html>

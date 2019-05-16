@@ -1,0 +1,18 @@
+
+        {%for p in usuarios:%}
+            <strong>{{p.cpf}}</strong> &nbsp; {{p.nome}} &nbsp; {{p.endereco}} &nbsp; {{p.telefone}} &nbsp; 
+            <a href=/excluir_pessoa?cpf={{p.cpf}}>Excluir</a> &nbsp; 
+            <a href=/form_alterar_pessoa?cpf={{p.cpf}}><img src="static/alterar.png" style="width: 15px; height: 15px;"></a>
+            <form action="/form_alterar_pessoa">
+                <input type="hidden" name="cpf" value="{{p.cpf}}">
+                <input type="submit" value="Alterar"> <!-- botao pra enviar dados (alterar pessoa) -->
+                <!-- faz a msm coisa do link -->
+            </form>
+           
+    
+        {%endfor%}
+       
+        
+        <a href="/form_inserir_pessoa">Inserir Pessoa</a>
+    
+        <a href="/">Voltar ao inicio</a>
