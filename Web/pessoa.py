@@ -1,9 +1,33 @@
-class Pessoa():
+from peewee import *
+import os 
 
-    def __init__(self,cpf,nome,endereco,telefone):
-        self.cpf = cpf
-        self.nome = nome
-        self.endereco = endereco
-        self.telefone = telefone
+db = SqliteDatabase("pessoa.db")
 
-lista = [Pessoa(1,"Zé","Rua aleatoria","90238"),Pessoa(2,"Alfred","Rua Baricentrica Central","5317-67473"),Pessoa(3,"EuExisto","Verdadeira.tx","57321G")]
+class Pessoa(Model):
+
+    cpf = CharField()
+    nome = CharField()
+    endereco = CharField()
+    telefone = CharField()
+
+    class Meta():
+        
+        database = db
+
+if __name__ == "__main__":
+    '''
+    arq = "pessoa.db"
+    if os.path.exists(arq):
+        os.remove(arq)
+
+    try:
+        db.connect()
+        db.create_tables([Pessoa])
+    
+    except OperationalError as err:
+        print("ERROU")
+
+    Pessoa.create (cpf = "090.012.919-02", nome = "Sofia Katherine Cimardi", 
+    endereco = "Rua Itapema, 562", telefone = "(47) 9 9618-1422")
+    '''
+    lista = Pessoa.select()

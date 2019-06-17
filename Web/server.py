@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 from pessoa import *
+from peewee import *
+
 app = Flask("__name__") #objeto
 
 app.config["SECRET_KEY"] = 'admin'
@@ -9,7 +11,7 @@ def iniciar():
 
 @app.route("/listar_pessoas")
 def listar_pessoas():
-    return render_template("listar_pessoas.html", usuarios=lista)
+    return render_template("listar_pessoas.html", usuarios=Pessoa.select())
 
 @app.route("/form_inserir_pessoa")
 def inserir_pessoa():
@@ -25,7 +27,7 @@ def add():
     nome = request.form["nome"]
     endereco = request.form["endereco"]
     telefone = request.form["telefone"]
-    lista.append(Pessoa(cpf,nome,endereco,telefone))
+    Pessoa.create(cpf = cpf, nome = nome, endereco = endereco, telefone = telefone)
     return redirect(url_for("iniciar"))
     
 
