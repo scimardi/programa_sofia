@@ -1,0 +1,71 @@
+{
+    "lista": [
+      {
+        "arbitro": {
+          "federacao": "FPB", 
+          "id": 1, 
+          "idade": 47, 
+          "nome": "Renatinho"
+        }, 
+        "id": 1, 
+        "local": {
+          "area": 1500, 
+          "id": 1, 
+          "nome": "Arena Carioca 1", 
+          "num_lugares": 16000
+        }, 
+        "pont_a": {
+          "arremesso_dg": 21, 
+          "arremesso_fg": 16, 
+          "id": 1, 
+          "tiro_livre": 19
+        }, 
+        "pont_b": {
+          "arremesso_dg": 15, 
+          "arremesso_fg": 15, 
+          "id": 2, 
+          "tiro_livre": 19
+        }, 
+        "tempo": 40, 
+        "time_a": {
+          "ano_fund": 1919, 
+          "id": 1, 
+          "nome": "FlaBasquete", 
+          "pais_orig": "Brasil", 
+          "tecnico": {
+            "carreira": "time do IFC", 
+            "id": 1, 
+            "idade": 38, 
+            "nome": "Hylson"
+          }, 
+          "vit_der": {
+            "id": 1, 
+            "qtd_der": 2, 
+            "qtd_vit": 48
+          }
+        }, 
+        "time_b": {
+          "ano_fund": 1928, 
+          "id": 2, 
+          "nome": "Corinthians", 
+          "pais_orig": "Brasil", 
+          "tecnico": {
+            "carreira": "nada", 
+            "id": 2, 
+            "idade": 35, 
+            "nome": "Deivis"
+          }, 
+          "vit_der": {
+            "id": 2, 
+            "qtd_der": 48, 
+            "qtd_vit": 2
+          }
+        }, 
+        "torcida": {
+          "id": 1, 
+          "torcedores_a": 10000, 
+          "torcedores_b": 6000
+        }
+      }
+    ]
+  }
